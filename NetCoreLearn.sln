@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2036
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreLearn", "NetCoreLearn\NetCoreLearn.csproj", "{445E5C21-D29B-4A9F-B1F7-C33EEAB81CDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreLearn.Core", "NetCoreLearn.Core\NetCoreLearn.Core.csproj", "{1D021FA6-3ACC-430A-A56C-3FC49811E4CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreLearn", "NetCoreLearn\NetCoreLearn.csproj", "{2AF1653D-00A5-4B94-8E8D-ED50B568E4C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{445E5C21-D29B-4A9F-B1F7-C33EEAB81CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{445E5C21-D29B-4A9F-B1F7-C33EEAB81CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{445E5C21-D29B-4A9F-B1F7-C33EEAB81CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{445E5C21-D29B-4A9F-B1F7-C33EEAB81CDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D021FA6-3ACC-430A-A56C-3FC49811E4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D021FA6-3ACC-430A-A56C-3FC49811E4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D021FA6-3ACC-430A-A56C-3FC49811E4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D021FA6-3ACC-430A-A56C-3FC49811E4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF1653D-00A5-4B94-8E8D-ED50B568E4C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF1653D-00A5-4B94-8E8D-ED50B568E4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF1653D-00A5-4B94-8E8D-ED50B568E4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF1653D-00A5-4B94-8E8D-ED50B568E4C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

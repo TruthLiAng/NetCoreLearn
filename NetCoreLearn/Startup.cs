@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NetCoreLearn.Core.MemoryLearn;
 
 namespace NetCoreLearn
 {
@@ -31,6 +32,11 @@ namespace NetCoreLearn
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            #region learn DI
+
+            services.AddSingleton<MyMemoryCache>();
+
+            #endregion learn DI
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

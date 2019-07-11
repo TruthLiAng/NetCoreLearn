@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreLearn.Core", "NetCor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreLearn", "NetCoreLearn\NetCoreLearn.csproj", "{2AF1653D-00A5-4B94-8E8D-ED50B568E4C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadConsole", "ThreadConsole\ThreadConsole.csproj", "{9B6AF1E2-2AAC-43AD-A549-10EA52301887}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2AF1653D-00A5-4B94-8E8D-ED50B568E4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF1653D-00A5-4B94-8E8D-ED50B568E4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF1653D-00A5-4B94-8E8D-ED50B568E4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B6AF1E2-2AAC-43AD-A549-10EA52301887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6AF1E2-2AAC-43AD-A549-10EA52301887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B6AF1E2-2AAC-43AD-A549-10EA52301887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B6AF1E2-2AAC-43AD-A549-10EA52301887}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

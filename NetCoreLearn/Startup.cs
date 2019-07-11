@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Hangfire;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NetCoreLearn.Core.MemoryLearn;
+using System;
 
 namespace NetCoreLearn
 {
@@ -36,6 +33,12 @@ namespace NetCoreLearn
 
             services.AddSingleton<MyMemoryCache>();
 
+            // Angular's default header name for sending the XSRF token.
+            services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
+
+            services.AddHangfire(x => x.UseSqlServerStorage(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddHangfireServer();
+
             #endregion learn DI
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -57,6 +60,9 @@ namespace NetCoreLearn
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            app.UseHangfireDashboard();
+            BackgroundJob.Enqueue(() => Console.WriteLine("Hello, world!"));
 
             app.UseMvc(routes =>
             {

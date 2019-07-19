@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ThreadConsole
 {
+    /// <summary>
+    /// 多线程练习
+    /// </summary>
     internal class Program
     {
         private static void Main(string[] args)

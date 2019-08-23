@@ -34,7 +34,7 @@ namespace MediatRWebApplication
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddMediatR(typeof(MediatRWebApplication.Controllers.HomeController));
+            services.AddMediatR(typeof(Microsoft.AspNetCore.Mvc.Controller));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

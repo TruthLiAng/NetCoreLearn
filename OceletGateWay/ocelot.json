@@ -1,0 +1,24 @@
+{
+  "ReRoutes": [
+    //apiOne ÍòÄÜÄ£°å
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 61345
+        },
+        {
+          "Host": "localhost",
+          "Port": 61395
+        }
+      ],
+      "UpstreamPathTemplate": "/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:61210"
+  }
+}

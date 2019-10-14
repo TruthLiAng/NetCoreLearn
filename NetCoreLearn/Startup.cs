@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NetCoreLearn.Common;
 using NetCoreLearn.Core.MemoryLearn;
 using System;
 
@@ -29,6 +30,8 @@ namespace NetCoreLearn
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddSerilogTool();
+
             #region learn DI
 
             services.AddSingleton<MyMemoryCache>();
@@ -36,8 +39,8 @@ namespace NetCoreLearn
             // Angular's default header name for sending the XSRF token.
             services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
 
-            services.AddHangfire(x => x.UseSqlServerStorage(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddHangfireServer();
+            //services.AddHangfire(x => x.UseSqlServerStorage(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddHangfireServer();
 
             #endregion learn DI
 
@@ -61,8 +64,8 @@ namespace NetCoreLearn
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseHangfireDashboard();
-            BackgroundJob.Enqueue(() => Console.WriteLine("Hello, world!"));
+            //app.UseHangfireDashboard();
+            //BackgroundJob.Enqueue(() => Console.WriteLine("Hello, world!"));
 
             app.UseMvc(routes =>
             {

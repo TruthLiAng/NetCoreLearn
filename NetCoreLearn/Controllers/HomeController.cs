@@ -5,13 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NetCoreLearn.Models;
+using Serilog.Core;
 
 namespace NetCoreLearn.Controllers
 {
     public class HomeController : Controller
     {
+        public Logger Logger { get; set; }
+
+        public HomeController(Logger logger)
+        {
+            Logger = logger;
+        }
+
         public IActionResult Index()
         {
+            Logger.Information("dasdsadasdasd");
             return View();
         }
 
